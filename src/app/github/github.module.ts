@@ -8,6 +8,6 @@ import {Github} from "./shared/github";
   providers      : [Github],
   entryComponents: [RepoBrowser]
 })
-export class GithubModule {
+export default class GithubModule {
 
 }

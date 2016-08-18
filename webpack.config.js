@@ -2,7 +2,6 @@
 const webpack = require('webpack');
 const path = require('path');
 const productionEnv = process.argv.indexOf('production') || process.env.NODE_ENV === 'production';
-
 // Webpack Config
 var webpackConfig = {
   entry: {
@@ -14,7 +13,6 @@ var webpackConfig = {
     path: './dist'
   },
   plugins: [
-    new webpack.optimize.OccurrenceOrderPlugin(true),
     new webpack.LoaderOptionsPlugin({
       minimize: productionEnv,
       debug: false // !productionEnv if debugging the build
@@ -58,7 +56,6 @@ var defaultConfig = {
     global: 1,
     crypto: 'empty',
     module: 0,
-    fs: 'empty',
     Buffer: 0,
     clearImmediate: 0,
     setImmediate: 0

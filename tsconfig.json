@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "module": "es2015",
-    "target": "es5",
+    "target": "es6",
     "outDir": "dist",
     "rootDir": ".",
     "sourceMap": true,
@@ -10,12 +10,18 @@
     "moduleResolution": "node"
   },
   "exclude": [
+    "typings/browser.d.ts",
+    "typings/browser",
     "node_modules"
   ],
   "awesomeTypescriptLoaderOptions": {
-    "useWebpackText": true
+    "useWebpackText": true,
+    "useCache": true,
+    "useBabel": true
   },
   "compileOnSave": false,
   "buildOnSave": false,
-  "atom": { "rewriteTsconfig": false }
+  "atom": {
+    "rewriteTsconfig": false
+  }
 }
